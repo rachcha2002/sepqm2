@@ -1,0 +1,16 @@
+{
+  "name": "sepqm2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.3",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7"
+  }
+}
