@@ -454,10 +454,17 @@ test.describe("Database Testing", () => {
 
     // Log user after delete
     console.log("User after delete:", user);
-    fs.writeFileSync(
-      "./test-results/db-logs/user-after-delete.json",
-      JSON.stringify(user, null, 2)
-    );
+    if (user) {
+      fs.writeFileSync(
+        "./test-results/db-logs/user-after-delete.json",
+        JSON.stringify(user, null, 2)
+      );
+    } else {
+      fs.writeFileSync(
+        "./test-results/db-logs/user-after-delete.json",
+        JSON.stringify({ status: "User deleted successfully" }, null, 2)
+      );
+    }
 
     expect(user).toBeUndefined();
     console.log("User deleted successfully");
